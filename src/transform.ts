@@ -3,8 +3,9 @@ import { RuneCoordinates } from "./positions";
 export class CanvasTransforms {
     private coordinates: RuneCoordinates
 
-    constructor(private canvas: HTMLCanvasElement) { 
+    constructor(private canvas: HTMLCanvasElement, runeCoordinates: RuneCoordinates) { 
         this.canvas = canvas;
+        this.coordinates = runeCoordinates;
     }
 
     get ctx(): CanvasRenderingContext2D | null{
